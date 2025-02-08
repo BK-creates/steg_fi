@@ -1,0 +1,19 @@
+<!-- decode-home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decode</title>
+</head>
+<body>
+    <h1>Decode Message</h1>
+    <form action="/network/decode" method="POST">
+        <button type="submit">Decode</button>
+    </form>
+    {% if decoded_message %}
+    <p>Decoded Message:</p>
+    <p>{{ decoded_message }}</p>
+    {% endif %}
+</body>
+</html>

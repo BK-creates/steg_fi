@@ -1,0 +1,37 @@
+<!-- encode-home.html -->
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encode</title>
+</head>
+<body>
+    <h1>Encode Message</h1>
+    <form action="/network/encode" method="POST">
+        <input type="text" name="message" placeholder="Enter message">
+        <button type="submit">Encode</button>
+    </form>
+    {% if encoded_message %}
+    <p>Encoded Message:</p>
+    <p>{{ encoded_message }}</p>
+    {% endif %}
+</body>
+</html>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Encode Message</title>
+</head>
+<body>
+    <h1>Encode Message</h1>
+    <form action="{{ url_for('network.encode') }}" method="POST">
+        <textarea name="message" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Encode">
+    </form>
+    {% if encoded_message %}
+        <p>Encoded Message: {{ encoded_message }}</p>
+    {% endif %}
+</body>
+</html>
+
